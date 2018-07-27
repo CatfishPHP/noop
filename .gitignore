@@ -2,3 +2,4 @@
 /vendor/
 /.idea
 /.phpcs-cache
+composer.lock

@@ -16,7 +16,6 @@ before_install:
   - travis_retry composer self-update
 
 install:
-  - rm composer.lock
   - travis_retry composer update --prefer-dist
 
 script:
@@ -30,7 +29,6 @@ jobs:
     - stage: Test
       env: DEPENDENCIES=low
       install:
-        - rm composer.lock
         - travis_retry composer update --prefer-dist --prefer-lowest
 
     - stage: Test
