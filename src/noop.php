@@ -1,11 +1,9 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Catfish\Noop;
 
-/**
- * Noop function
- * @return void
- */
-function noop() {
-    //
+function noop() : void
+{
 }

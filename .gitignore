@@ -1,3 +1,4 @@
-composer.phar
+/composer.phar
 /vendor/
-.idea
+/.idea
+/.phpcs-cache

@@ -1,14 +1,21 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Tests\Noop;
 
-use function Catfish\Noop\noop;
-
 use PHPUnit\Framework\TestCase;
+use Throwable;
+use function Catfish\Noop\noop;
 
 class FunctionTest extends TestCase
 {
-    public function testNoopFunction()
+    public function testNoopFunction() : void
     {
-        $this->assertNull(noop());
+        try {
+            noop();
+        } catch (Throwable $e) {
+            self::fail('noop failed');
+        }
     }
 }
